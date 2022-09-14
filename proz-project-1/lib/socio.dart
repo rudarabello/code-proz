@@ -18,7 +18,7 @@ abstract class Socio {
     required this.estado,
   });
 
-  String get documento {
+  static String tipoDeDocumento(codigoUnico) {
     if (codigoUnico.length == 11) {
       return "${codigoUnico.substring(0, 3)}.${codigoUnico.substring(3, 6)}.${codigoUnico.substring(6, 9)}.${codigoUnico.substring(10, 12)}";
     } else if (codigoUnico.length == 14) {

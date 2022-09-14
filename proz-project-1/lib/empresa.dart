@@ -1,29 +1,26 @@
+import 'package:proz_project_1/socio.dart';
+import 'package:proz_project_1/socio_pf.dart';
 import 'package:uuid/uuid.dart';
 
-var uniqueIdEmterprise = Uuid().v1();
-
-abstract class Company {
-  String id;
-  String cnpj;
-  String dataDeCadastro;
-  String razaoSocial;
+class Empresa extends SocioPf {
+  final _uniqueIdEnterprise = Uuid().v1();
+  final dataDeRegistro = DateTime.now();
+  Socio socio;
   String nomeFantasia;
   String telefone;
-  String endereco;
-  String cpfDoSocio;
-  String nomeDoSocio;
-  String enderecoDoSocio;
-  Company({
-    //uniqueIdEmterprise.v1()
-    required this.id,
-    required this.cnpj,
-    required this.dataDeCadastro,
-    required this.razaoSocial,
+  String get uniqueIdEnterprise => _uniqueIdEnterprise;
+
+  Empresa({
     required this.nomeFantasia,
+    required super.nome,
+    required super.codigoUnico,
+    required super.cep,
+    required super.rua,
+    required super.numero,
+    required super.bairro,
+    required super.cidade,
+    required super.estado,
     required this.telefone,
-    required this.endereco,
-    required this.cpfDoSocio,
-    required this.nomeDoSocio,
-    required this.enderecoDoSocio,
+    required this.socio,
   });
 }

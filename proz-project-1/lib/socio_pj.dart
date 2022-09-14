@@ -1,7 +1,7 @@
 import 'package:proz_project_1/socio.dart';
 
-class SocioPf extends Socio {
-  SocioPf({
+class SocioPj extends Socio {
+  SocioPj({
     required super.nome,
     required super.codigoUnico,
     required super.cep,
@@ -11,5 +11,6 @@ class SocioPf extends Socio {
     required super.cidade,
     required super.estado,
   });
+
   String documento = Socio.tipoDeDocumento(this.codigoUnico);
 }
