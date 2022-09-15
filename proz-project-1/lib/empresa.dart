@@ -8,6 +8,7 @@ class Empresa extends SocioPf {
   Socio socio;
   String? nomeFantasia;
   String? telefone;
+  String cnpj;
   String get uniqueIdEnterprise => _uniqueIdEnterprise;
   DateTime get dataDeRegistro => _dataDeRegistro;
   String get telefoneFormatado =>
@@ -31,6 +32,7 @@ class Empresa extends SocioPf {
     required this.nomeFantasia,
     required this.telefone,
     required this.socio,
+    required this.cnpj,
     required super.nome,
     required super.codigoUnico,
     required super.cep,
@@ -39,5 +41,5 @@ class Empresa extends SocioPf {
     required super.bairro,
     required super.cidade,
     required super.estado,
-  });
+  }) : super();
 }
