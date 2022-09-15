@@ -6,12 +6,12 @@ class Empresa extends SocioPf {
   final _uniqueIdEnterprise = Uuid().v1();
   final _dataDeRegistro = DateTime.now();
   Socio socio;
-  String nomeFantasia;
-  String telefone;
+  String? nomeFantasia;
+  String? telefone;
   String get uniqueIdEnterprise => _uniqueIdEnterprise;
   DateTime get dataDeRegistro => _dataDeRegistro;
   String get telefoneFormatado =>
-      '${telefone.substring(0, 2)}${telefone.substring(2, 7)}-${telefone.substring(7)}';
+      '${telefone!.substring(0, 2)}${telefone!.substring(2, 7)}-${telefone!.substring(7)}';
   String get resultadoFinal {
     return '''
     ID: $uniqueIdEnterprise

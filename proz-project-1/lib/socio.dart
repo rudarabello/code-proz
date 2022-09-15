@@ -1,12 +1,12 @@
 abstract class Socio {
-  String nome;
+  String? nome;
   String codigoUnico;
   String cep;
   String rua;
-  int numero;
-  String bairro;
-  String cidade;
-  String estado;
+  int? numero;
+  String? bairro;
+  String? cidade;
+  String? estado;
   Socio({
     required this.nome,
     required this.codigoUnico,
