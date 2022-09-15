@@ -11,5 +11,4 @@ class SocioPf extends Socio {
     required super.cidade,
     required super.estado,
   });
-  String documento = Socio.tipoDeDocumento(this.codigoUnico);
 }
